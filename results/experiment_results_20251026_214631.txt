@@ -1,0 +1,16 @@
+============================================================
+Transformer Experiment Results (EN→DE Translation)
+============================================================
+task: IWSLT2017 EN→DE Translation
+seed: 42
+
+config:
+  model: {'d_model': 128, 'n_layers': 2, 'n_heads': 4, 'd_ff': 512, 'max_seq_len': 64, 'dropout': 0.1}
+  training: {'batch_size': 32, 'lr': '3e-4', 'weight_decay': '1e-4', 'num_epochs': 5, 'lr_step_size': 5, 'lr_gamma': 0.1}
+num_epochs: 5
+final_train_loss: 2.3848075971932245
+final_val_loss: 2.311663114107572
+best_val_loss: 2.311663114107572
+device: cpu
+timestamp: 20251026_214631
+============================================================

@@ -1,0 +1,36 @@
+# configs/ablation.yaml
+ablation:
+  experiments:
+    - name: "full_model"
+      use_positional_encoding: true
+      use_residual_connections: true
+      use_layer_norm: true
+      n_heads: 4
+      
+    - name: "no_positional_encoding"  
+      use_positional_encoding: false
+      use_residual_connections: true
+      use_layer_norm: true
+      n_heads: 4
+      
+    - name: "reduced_heads"
+      use_positional_encoding: true
+      use_residual_connections: true  
+      use_layer_norm: true
+      n_heads: 2
+
+model:
+  d_model: 256
+  n_layers: 3
+  n_heads: 4
+  d_ff: 512
+  max_seq_len: 64
+  dropout: 0.1
+
+training:
+  batch_size: 32
+  lr: 3e-4
+  weight_decay: 1e-4
+  num_epochs: 25
+  lr_step_size: 8
+  lr_gamma: 0.5
